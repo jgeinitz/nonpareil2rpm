@@ -1,0 +1,16 @@
+diff -uNr nonpareil.orig/src/wasm.h nonpareil/src/wasm.h
+--- nonpareil.orig/src/wasm.h	1970-01-01 00:00:00.000000000 +0000
++++ nonpareil/src/wasm.h	2025-09-05 10:59:47.661178142 +0000
+@@ -0,0 +1 @@
++#include "wasm_y.h"
+diff -uNr nonpareil.orig/src/wasm_y.y nonpareil/src/wasm_y.y
+--- nonpareil.orig/src/wasm_y.y	2025-09-05 10:37:43.000000000 +0000
++++ nonpareil/src/wasm_y.y	2025-09-05 11:03:21.943580477 +0000
+@@ -36,6 +36,7 @@
+ int ptr_test_map [14];
+ 
+ void wasm_error (char *s);
++void pseudo_check(addr_t pc);
+ %}
+ 
+ %union {
